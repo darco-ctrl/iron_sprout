@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bfu4ps4jr8wt4"]
+
+[ext_resource type="Script" uid="uid://bnsjj10b6bern" path="res://resources/scripts/item.gd" id="1_hbu7g"]
+[ext_resource type="Texture2D" uid="uid://dvy7008peqpu" path="res://assets/items/log.png" id="2_8ql1g"]
+
+[resource]
+script = ExtResource("1_hbu7g")
+item_name = "log"
+item_id = "log"
+texture = ExtResource("2_8ql1g")
+max_quantity = 16
+metadata/_custom_type_script = "uid://bnsjj10b6bern"
