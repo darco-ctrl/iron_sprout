@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b1fpdcm6ofv1e"]
+
+[ext_resource type="PackedScene" uid="uid://cn1djvk85qvpv" path="res://game/world_environment/ground/ground.tscn" id="1_0pcee"]
+[ext_resource type="PackedScene" uid="uid://dslwxt8odveaf" path="res://game/world_environment/sun/sun.tscn" id="2_3ewv2"]
+[ext_resource type="PackedScene" uid="uid://cuf08rixijnl2" path="res://game/trees/tree.tscn" id="3_vq6hp"]
+[ext_resource type="PackedScene" uid="uid://c1nwdcrw02jc3" path="res://game/trees/tree1.tscn" id="4_7ofj7"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3ewv2"]
+sky_top_color = Color(0.48339355, 0.6729919, 0.9975664, 1)
+sky_horizon_color = Color(0.8939126, 0.8968515, 0.90272367, 1)
+
+[sub_resource type="Sky" id="Sky_vq6hp"]
+sky_material = SubResource("ProceduralSkyMaterial_3ewv2")
+
+[sub_resource type="Environment" id="Environment_7ofj7"]
+background_mode = 2
+sky = SubResource("Sky_vq6hp")
+
+[node name="terrain" type="Node3D" unique_id=479316254]
+
+[node name="Ground" parent="." unique_id=1735055823 instance=ExtResource("1_0pcee")]
+
+[node name="sun" parent="." unique_id=49080811 instance=ExtResource("2_3ewv2")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1036938363]
+environment = SubResource("Environment_7ofj7")
+
+[node name="Trees" type="Node3D" parent="." unique_id=994059235]
+
+[node name="tree" parent="Trees" unique_id=1474879549 instance=ExtResource("3_vq6hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2772503, 0, 2.0740452)
+
+[node name="tree2" parent="Trees" unique_id=973936802 instance=ExtResource("3_vq6hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7454715, 0, 0.6099968)
+
+[node name="tree3" parent="Trees" unique_id=1596943784 instance=ExtResource("3_vq6hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5244732, 0, 1.7565837)
+
+[node name="tree4" parent="Trees" unique_id=1001227717 instance=ExtResource("3_vq6hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5244732, 0, -2.989275)
+
+[node name="tree5" parent="Trees" unique_id=1739859165 instance=ExtResource("3_vq6hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1840925, 0, -2.989275)
+
+[node name="tree6" parent="Trees" unique_id=1295974278 instance=ExtResource("3_vq6hp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1840925, 0, -2.989275)
+
+[node name="tree7" parent="Trees" unique_id=13389623 instance=ExtResource("4_7ofj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0817032, 0, -2.0219471)
+
+[node name="tree8" parent="Trees" unique_id=1141834002 instance=ExtResource("4_7ofj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3508596, 0, -1.6459489)
+
+[node name="tree9" parent="Trees" unique_id=1060455330 instance=ExtResource("4_7ofj7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7361984, 0, 2.3741574)

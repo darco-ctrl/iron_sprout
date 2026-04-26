@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://cpyr51uxo4um2"]
+
+[ext_resource type="Script" uid="uid://bybprp0y737xy" path="res://game/player/player.gd" id="1_b2mth"]
+[ext_resource type="Texture2D" uid="uid://cw1ywv402eahx" path="res://assets/player/Idle.png" id="1_obar5"]
+[ext_resource type="Texture2D" uid="uid://ch8uvfgwaeduk" path="res://assets/player/Die.png" id="2_8soms"]
+[ext_resource type="Texture2D" uid="uid://c12cpu3p21t2r" path="res://assets/player/RecieveDamage.png" id="4_4ste8"]
+[ext_resource type="Texture2D" uid="uid://bthtxo1eh34w1" path="res://assets/player/Run.png" id="5_anr75"]
+[ext_resource type="Texture2D" uid="uid://b5f33aqirqc24" path="res://assets/player/Walk.png" id="6_epvkq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4w0n"]
+atlas = ExtResource("2_8soms")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fytw"]
+atlas = ExtResource("2_8soms")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ste8"]
+atlas = ExtResource("2_8soms")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anr75"]
+atlas = ExtResource("2_8soms")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epvkq"]
+atlas = ExtResource("2_8soms")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ghna"]
+atlas = ExtResource("2_8soms")
+region = Rect2(2560, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2mth"]
+atlas = ExtResource("1_obar5")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8soms"]
+atlas = ExtResource("1_obar5")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0mij"]
+atlas = ExtResource("4_4ste8")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb4gm"]
+atlas = ExtResource("4_4ste8")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv2nh"]
+atlas = ExtResource("4_4ste8")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n270p"]
+atlas = ExtResource("4_4ste8")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ep63"]
+atlas = ExtResource("5_anr75")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqcxa"]
+atlas = ExtResource("5_anr75")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mv0n"]
+atlas = ExtResource("5_anr75")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh012"]
+atlas = ExtResource("5_anr75")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usp30"]
+atlas = ExtResource("6_epvkq")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e4oy"]
+atlas = ExtResource("6_epvkq")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeltd"]
+atlas = ExtResource("6_epvkq")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_088ty"]
+atlas = ExtResource("6_epvkq")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a4w0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4w0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fytw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ste8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anr75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epvkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ghna")
+}],
+"loop": false,
+"name": &"die",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2mth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8soms")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0mij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb4gm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv2nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n270p")
+}],
+"loop": false,
+"name": &"recieve_damage",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ep63")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqcxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mv0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh012")
+}],
+"loop": true,
+"name": &"run",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usp30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e4oy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeltd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_088ty")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5fytw"]
+size = Vector3(0.27441406, 0.6716156, 0.02)
+
+[node name="Player" type="CharacterBody3D" unique_id=1799927080 node_paths=PackedStringArray("animation_sprite_3d")]
+script = ExtResource("1_b2mth")
+animation_sprite_3d = NodePath("AnimatedSprite3D")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1546389869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+pixel_size = 0.00195
+sprite_frames = SubResource("SpriteFrames_a4w0n")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.78392136
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2104830618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0390625, 0.34186554, 0)
+shape = SubResource("BoxShape3D_5fytw")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=603090707]
+
+[node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=2068217996]
+transform = Transform3D(1, 0, 0, 0, 0.8866964, 0.46235228, 0, -0.46235228, 0.8866964, 0, 4.6, 7.5)
+fov = 40.0
+far = 100.0
