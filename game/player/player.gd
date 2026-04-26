@@ -1,9 +1,12 @@
 extends CharacterBody3D
+class_name  Player
 
 @export var animation_sprite_3d: AnimatedSprite3D
 
 @export var walk_speed: float = 1.3
 @export var run_speed: float = 2
+
+@export var inventory: PlayerInventory
 
 var is_player_running: bool = false
 

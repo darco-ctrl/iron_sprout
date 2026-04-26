@@ -1,11 +1,18 @@
 extends Node3D
 
+@export var item_icon: Sprite2D
 
-# Called when the node enters the scene tree for the first time.
+@export var item_data: ItemData
+
 func _ready() -> void:
-	pass # Replace with function body.
+	update()
 
+func update() -> void:
+	item_icon.texture = item_data.texture
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	
+	var player: Player = body as Player
+
+	if player:
+		pass

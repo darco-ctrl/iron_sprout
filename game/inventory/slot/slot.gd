@@ -7,8 +7,9 @@ class_name  Slot
 var slot_data: SlotData
 
 func _ready() -> void:
-	slot_data = SlotData.new()
-
+	slot_data.slot_item_changed.connect(update_slot.bind(true))
+	slot_data.slot_quantity_changed.connect(update_slot)
+	
 	quantity_label.text = ""
 
 func add_item(new_item_data: ItemData, add_quantity: int) -> int:

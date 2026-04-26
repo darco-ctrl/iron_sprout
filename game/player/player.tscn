@@ -179,9 +179,11 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_5fytw"]
 size = Vector3(0.27441406, 0.6716156, 0.02)
 
-[node name="Player" type="CharacterBody3D" unique_id=1799927080 node_paths=PackedStringArray("animation_sprite_3d")]
+[node name="Player" type="CharacterBody3D" unique_id=1799927080 node_paths=PackedStringArray("animation_sprite_3d", "inventory")]
+collision_mask = 0
 script = ExtResource("1_b2mth")
 animation_sprite_3d = NodePath("AnimatedSprite3D")
+inventory = NodePath("UI/PlayerInventory")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1546389869]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

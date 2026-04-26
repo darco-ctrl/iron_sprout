@@ -18,3 +18,5 @@ shape = SubResource("SphereShape3D_mrjnq")
 pixel_size = 0.03
 texture_filter = 0
 texture = ExtResource("2_oayar")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

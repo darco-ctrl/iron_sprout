@@ -8,6 +8,8 @@ class_name HotbarUI
 @export var slot_packed_scene: PackedScene
 
 func _ready() -> void:
+	inventory.slots.resize(inventory.max_slots)
+	
 	reload_slots()
 
 func reload_slots() -> void:
@@ -18,6 +20,10 @@ func reload_slots() -> void:
 		slot.name = "hotbar_" + str(i)
 
 		slot_grid.add_child(slot)
+
+		var slot_data = SlotData.new()
+		inventory.slots[i] = slot_data
+		slot.slot_data = slot_data
 
 
 	
