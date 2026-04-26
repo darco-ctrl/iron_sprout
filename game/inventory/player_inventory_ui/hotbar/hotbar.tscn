@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://x3s6732iocjq"]
 
 [ext_resource type="Script" uid="uid://cniexci6apg56" path="res://game/inventory/player_inventory_ui/hotbar/hotbar.gd" id="1_n03p7"]
-[ext_resource type="Resource" uid="uid://do1cfpeptlrd6" path="res://resources/inventories/hotbar.tres" id="2_v5ibq"]
 [ext_resource type="PackedScene" uid="uid://dp0lfi4efesj3" path="res://game/inventory/slot/slot.tscn" id="3_jtb4n"]
 [ext_resource type="Texture2D" uid="uid://dk6vap4k3ufl1" path="res://assets/ui/inventories/hotbar.png" id="3_l2jru"]
 
@@ -14,7 +13,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n03p7")
 slot_grid = NodePath("HBoxContainer")
-inventory = ExtResource("2_v5ibq")
 slot_packed_scene = ExtResource("3_jtb4n")
 
 [node name="Texture" type="TextureRect" parent="." unique_id=2020745116]

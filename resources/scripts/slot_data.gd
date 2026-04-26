@@ -15,3 +15,4 @@ var quantity: int = 0:
         quantity = value
         slot_quantity_changed.emit()
 
+

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bb1ka12t10j12" path="res://main/main.gd" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://b1fpdcm6ofv1e" path="res://game/world_environment/terrain/terrain.tscn" id="2_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://cpyr51uxo4um2" path="res://game/player/player.tscn" id="3_xwkvk"]
+[ext_resource type="PackedScene" uid="uid://bmbpflyg7e560" path="res://game/dropped_item/dropped_item.tscn" id="4_c651c"]
 
 [node name="Main" type="Node3D" unique_id=222223210]
 script = ExtResource("1_53q0u")
@@ -10,3 +11,6 @@ script = ExtResource("1_53q0u")
 [node name="terrain" parent="." unique_id=479316254 instance=ExtResource("2_pjrb6")]
 
 [node name="Player" parent="." unique_id=1799927080 instance=ExtResource("3_xwkvk")]
+
+[node name="dropped_item" parent="." unique_id=2001469564 instance=ExtResource("4_c651c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1.5)

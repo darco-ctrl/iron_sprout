@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://bmbpflyg7e560"]
 
 [ext_resource type="Script" uid="uid://cxqwnteoojw8a" path="res://game/dropped_item/dropped_item.gd" id="1_ypb5i"]
-[ext_resource type="Texture2D" uid="uid://dvy7008peqpu" path="res://assets/items/log.png" id="2_oayar"]
+[ext_resource type="Resource" uid="uid://bfu4ps4jr8wt4" path="res://resources/items/log.tres" id="2_7vgv2"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mrjnq"]
-radius = 0.22712849
+radius = 0.2
 
-[node name="dropped_item" type="Node3D" unique_id=2001469564]
+[node name="dropped_item" type="Node3D" unique_id=2001469564 node_paths=PackedStringArray("item_icon")]
 script = ExtResource("1_ypb5i")
+item_icon = NodePath("Sprite3D")
+item_data = ExtResource("2_7vgv2")
+quantity = 12
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1202672811]
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=550543170]
 shape = SubResource("SphereShape3D_mrjnq")
@@ -17,6 +21,5 @@ shape = SubResource("SphereShape3D_mrjnq")
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=926156287]
 pixel_size = 0.03
 texture_filter = 0
-texture = ExtResource("2_oayar")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

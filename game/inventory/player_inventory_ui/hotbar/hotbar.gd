@@ -4,26 +4,20 @@ class_name HotbarUI
 
 @export var slot_grid: HBoxContainer
 
-@export var inventory: Inventory
 @export var slot_packed_scene: PackedScene
+@export var max_slots: int = 6
+
+var slots: Array[Slot]
 
 func _ready() -> void:
-	inventory.slots.resize(inventory.max_slots)
-	
 	reload_slots()
 
 func reload_slots() -> void:
 	
-	for i in range(inventory.max_slots):
-		
-		var slot: Slot = slot_packed_scene.instantiate()
-		slot.name = "hotbar_" + str(i)
-
-		slot_grid.add_child(slot)
-
-		var slot_data = SlotData.new()
-		inventory.slots[i] = slot_data
-		slot.slot_data = slot_data
-
-
+	InventoryBuilder.give_slot(
+		slots,
+		slot_packed_scene,
+		slot_grid,
+		max_slots
+	)
 	
