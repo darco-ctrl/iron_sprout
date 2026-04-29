@@ -11,7 +11,6 @@ func _ready() -> void:
 
 func add_item(new_item_data: ItemData, add_quantity: int) -> int:
 
-
 	if slot_data.item_data == null:
 
 		slot_data.item_data = new_item_data
@@ -53,11 +52,11 @@ func update_slot() -> void:
 	update_texture()
 	
 func mouse_button_left_clicked() -> void:
-	InventoryBuilder.drag_manager.add_item(self)
+	InventoryBuilder.drag_manager.slot_clicked(self)
 
 func _on_gui_input(event: InputEvent) -> void:
 	var mouse_event: InputEventMouseButton = event as InputEventMouseButton
 
 	if !mouse_event: return
-	if mouse_event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
+	if mouse_event.button_index == MouseButton.MOUSE_BUTTON_LEFT and mouse_event.pressed:
 		mouse_button_left_clicked()

@@ -16,6 +16,7 @@ item_quantity_label = NodePath("ItemIcon/ItemQuantityLabel")
 
 [node name="ItemIcon" type="TextureRect" parent="." unique_id=1825470647]
 texture_filter = 1
+clip_contents = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = -1
@@ -26,17 +27,18 @@ grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="ItemQuantityLabel" type="Label" parent="ItemIcon" unique_id=231729331]
+[node name="ItemQuantityLabel" type="Label" parent="ItemIcon" unique_id=974992698]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.734375
-anchor_top = 0.515625
+anchor_top = 0.38541663
 anchor_right = 1.0052083
 anchor_bottom = 0.9947916
+offset_top = 8.333336
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_1t3lp")
+theme_override_font_sizes/font_size = 32
 horizontal_alignment = 2
 vertical_alignment = 2
-clip_text = true
 metadata/_edit_use_anchors_ = true

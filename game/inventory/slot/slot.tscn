@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://bthqkcsf0uumf" path="res://assets/fonts/PixelifySans-Bold.ttf" id="2_nvy2g"]
 
 [node name="Slot" type="Control" unique_id=435741599 node_paths=PackedStringArray("item_icon", "quantity_label")]
+clip_contents = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 3
 anchor_right = 0.033333335
@@ -38,7 +39,6 @@ grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_nvy2g")
 horizontal_alignment = 2
 vertical_alignment = 2
-clip_text = true
 metadata/_edit_use_anchors_ = true
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
