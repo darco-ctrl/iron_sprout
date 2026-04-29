@@ -7,18 +7,14 @@ class_name  Slot
 var slot_data: SlotData
 
 func _ready() -> void:
-
 	quantity_label.text = ""
 
 func add_item(new_item_data: ItemData, add_quantity: int) -> int:
 
-	var update_texture: bool = false
 
 	if slot_data.item_data == null:
 
 		slot_data.item_data = new_item_data
-
-		update_texture = true
 	else:
 		return add_quantity
 
@@ -26,19 +22,42 @@ func add_item(new_item_data: ItemData, add_quantity: int) -> int:
 	var added: int = mini(space, add_quantity)
 	
 	slot_data.quantity += added
-	update_slot(update_texture)
+	update_slot()
 
 	return add_quantity - added
 
 
-func update_slot(update_texture: bool = false) -> void:
+func update_label() -> void:
+	var temp_str: String = "" 
 	
-	if update_texture:
+	if slot_data.quantity > 0:
+		temp_str = str(slot_data.quantity)
+	
+	quantity_label.text = temp_str
+
+func update_texture() -> void:
+	if slot_data.item_data:
 		item_icon.texture = slot_data.item_data.texture
 	
-	var quantity_string: String = ""
+	else:
+		item_icon.texture = null
 
-	if slot_data.quantity > 0:
-		quantity_string = str(slot_data.quantity)
+func update_slot() -> void:
+	if slot_data.item_data == null:
+		slot_data._quantity = 0
 
-	quantity_label.text = quantity_string
+		item_icon.texture = null
+		quantity_label.text = ""
+
+	update_label()
+	update_texture()
+	
+func mouse_button_left_clicked() -> void:
+	InventoryBuilder.drag_manager.add_item(self)
+
+func _on_gui_input(event: InputEvent) -> void:
+	var mouse_event: InputEventMouseButton = event as InputEventMouseButton
+
+	if !mouse_event: return
+	if mouse_event.button_index == MouseButton.MOUSE_BUTTON_LEFT:
+		mouse_button_left_clicked()

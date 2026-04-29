@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bui3esrc14n8x"]
 
 [ext_resource type="Script" uid="uid://ck0fiivq0y5hb" path="res://game/inventory/player_inventory_ui/player_inventory.gd" id="1_alpt8"]
+[ext_resource type="PackedScene" uid="uid://cxcqjo22dpd1i" path="res://game/inventory/drag_manager/drag_manager.tscn" id="2_44gv6"]
 [ext_resource type="PackedScene" uid="uid://x3s6732iocjq" path="res://game/inventory/player_inventory_ui/hotbar/hotbar.tscn" id="3_44gv6"]
 
-[node name="PlayerInventory" type="Control" unique_id=1389731472 node_paths=PackedStringArray("hotbar")]
+[node name="PlayerInventory" type="Control" unique_id=1389731472 node_paths=PackedStringArray("hotbar", "drag_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +13,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_alpt8")
 hotbar = NodePath("hotbar")
+drag_manager = NodePath("DragLayer/DragManager")
 
 [node name="hotbar" parent="." unique_id=1682795681 instance=ExtResource("3_44gv6")]
 layout_mode = 1
+
+[node name="DragLayer" type="CanvasLayer" parent="." unique_id=1448100434]
+layer = 2
+
+[node name="DragManager" parent="DragLayer" unique_id=1461425879 instance=ExtResource("2_44gv6")]
+mouse_filter = 2
+mouse_behavior_recursive = 2

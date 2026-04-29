@@ -2,17 +2,23 @@ extends Resource
 
 class_name SlotData
 
-signal slot_item_changed
-signal slot_quantity_changed
+signal slot_changed
 
+var _item_data: ItemData
 var item_data: ItemData:
     set(value):
-        item_data = value
-        slot_item_changed.emit()
+        _item_data = value
+        slot_changed.emit()
+    get:
+        return _item_data
 
-var quantity: int = 0:
+var _quantity: int = 0
+var quantity: int:
     set(value):
-        quantity = value
-        slot_quantity_changed.emit()
+        _quantity = value
+        slot_changed.emit()
+    get:
+        return _quantity
+
 
 

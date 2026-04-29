@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://b0bwnoel5sdl1"]
-
-[ext_resource type="Script" uid="uid://bu6v41j081bg1" path="res://game/inventory/inventory_builder/inventory_builder.gd" id="1_738sj"]
-
-[node name="InventoryBuilder" type="Node" unique_id=580705793]
-script = ExtResource("1_738sj")

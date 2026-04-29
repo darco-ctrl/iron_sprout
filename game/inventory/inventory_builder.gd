@@ -1,6 +1,8 @@
 class_name InventoryBuilder
 extends RefCounted
 
+static var drag_manager: DragManager	
+
 static func give_slot(
 	slots: Array[Slot],
 	slot_packed_scene: PackedScene,
@@ -16,8 +18,7 @@ static func give_slot(
 
 		var slot_data = SlotData.new()
 
-		slot_data.slot_item_changed.connect(slot.update_slot.bind(true))
-		slot_data.slot_quantity_changed.connect(slot.update_slot)
+		slot_data.slot_changed.connect(slot.update_slot)
 
 		slot.slot_data = slot_data
 		slots[i] = slot

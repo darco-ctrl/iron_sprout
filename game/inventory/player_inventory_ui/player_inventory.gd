@@ -3,6 +3,10 @@ class_name PlayerInventory
 
 @export var hotbar: HotbarUI
 @export var backpack: BackpackInventoryUI
+@export var drag_manager: DragManager
+
+func _ready() -> void:
+	InventoryBuilder.drag_manager = drag_manager
 
 func add_item(slot: SlotData) -> int:
 	
