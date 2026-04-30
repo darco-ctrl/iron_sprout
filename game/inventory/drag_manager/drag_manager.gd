@@ -5,13 +5,14 @@ class_name  DragManager
 @export var item_texture: TextureRect
 @export var item_quantity_label: Label
 
-@export var slot_data: SlotData
+var slot_data: SlotData
+
+var drop_manager: DropManager
+var player: Player
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	slot_data = SlotData.new()
-
-	slot_data.slot_changed.connect(update_dragger)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,7 +28,7 @@ func slot_clicked(slot: Slot) -> void:
 
 	var slot_has_item: bool = slot.slot_data.item_data != null
 	var dragger_has_item: bool = slot_data.item_data != null
-	var same_item: bool = slot_has_item and dragger_has_item and slot.slot_data.item_data.item_id == slot_data.item_data.item_id
+	var same_item: bool = slot_has_item and dragger_has_item and slot.slot_data.item_data.id == slot_data.item_data.id
 
 
 	# slot has item dragger doesnt
@@ -37,7 +38,7 @@ func slot_clicked(slot: Slot) -> void:
 	
 	# slot is empty but dragger has item
 	# slot has same item as dragger
-	if (not slot_has_item and dragger_has_item) or same_item:
+	elif (not slot_has_item and dragger_has_item) or same_item:
 		add_to_slot(slot)
 
 	update_dragger()
@@ -45,7 +46,8 @@ func slot_clicked(slot: Slot) -> void:
 
 func add_to_slot(slot: Slot) -> void:
 
-	slot_data._quantity = slot.add_item(slot_data.item_data, slot_data.quantity)
+	slot_data.quantity = slot.add_item(slot_data.item_data, slot_data.quantity)
+	
 
 
 
@@ -58,16 +60,10 @@ func swap_slot_dragger(slot: Slot) -> void:
 
 
 func update_dragger() -> void:
-	print("\n\n UPDATE DRAGGER ")
-	print("DRAGGER QUANITYT: " + str(slot_data.quantity))
-
-
 
 	if slot_data.quantity <= 0 or not slot_data.item_data:
-		print("i been called")
-		print("DRAGGER QUANITYT: " + str(slot_data.quantity))
-		slot_data._item_data = null
-		slot_data._quantity = 0
+		slot_data.item_data = null
+		slot_data.quantity = 0
 
 		item_texture.texture = null
 		item_quantity_label.text = ""
@@ -77,8 +73,6 @@ func update_dragger() -> void:
 	item_texture.texture = slot_data.item_data.texture
 	
 	item_quantity_label.text = str(slot_data.quantity)
-	print("DRAGGER QUANITYT: " + str(slot_data.quantity))
-	print("exiting")
 	#) -- this prints 10
 
 func update_position() -> void:
@@ -86,3 +80,17 @@ func update_position() -> void:
 
 	item_texture.position.x = mouse_pos.x - (item_texture.size.x / 2)
 	item_texture.position.y = mouse_pos.y - (item_texture.size.y / 2)
+
+
+func drop_item() -> void:
+	if slot_data.item_data:
+		drop_manager.drop_item(slot_data)
+		update_dragger()
+
+func _on_gui_input(event: InputEvent) -> void:
+
+	var mouse_event = event as InputEventMouseButton
+
+	if !mouse_event: return
+	if mouse_event.button_index == MouseButton.MOUSE_BUTTON_LEFT and mouse_event.pressed:
+		drop_item()

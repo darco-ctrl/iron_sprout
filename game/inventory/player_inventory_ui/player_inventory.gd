@@ -2,11 +2,14 @@ extends Control
 class_name PlayerInventory
 
 @export var hotbar: HotbarUI
-@export var backpack: BackpackInventoryUI
 @export var drag_manager: DragManager
 
+var player: Player
+
 func _ready() -> void:
-	InventoryBuilder.drag_manager = drag_manager
+	GlobalInventoryAccess.player_inventory = self
+	GlobalInventoryAccess.drag_manager = drag_manager
+	drag_manager.player = player
 
 func add_item(slot: SlotData) -> int:
 	
@@ -14,14 +17,6 @@ func add_item(slot: SlotData) -> int:
 
 	var slots: Array[Slot] = hotbar.slots
 
-	left_over = add_to_inventory(
-		slot.item_data,
-		left_over,
-		slots,)
-
-	if left_over <= 0: return left_over
-
-	#inventory = 
 	left_over = add_to_inventory(
 		slot.item_data,
 		left_over,

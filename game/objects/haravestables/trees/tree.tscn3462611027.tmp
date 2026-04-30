@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dlddyqegn853s"]
+
+[ext_resource type="Texture2D" uid="uid://c62n3h2p37bgl" path="res://assets/props/trees/tree_1.png" id="1_fqqln"]
+[ext_resource type="Script" uid="uid://bcofe6htuxw3m" path="res://game/objects/haravestables/harvestable_behavior.gd" id="1_xwn44"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fqqln"]
+height = 2.0302734
+radius = 0.38330078
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwn44"]
+radius = 0.05
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xwn44"]
+height = 0.1
+
+[node name="Tree" type="Node3D" unique_id=518745851 node_paths=PackedStringArray("sprite_3d", "selection_indiecator_mesh")]
+script = ExtResource("1_xwn44")
+sprite_3d = NodePath("Sprite3D")
+selection_indiecator_mesh = NodePath("MeshInstance3D")
+
+[node name="MouseCollision" type="StaticBody3D" parent="." unique_id=1499097767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1977522, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MouseCollision" unique_id=1934995612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.048583984, -0.006652832, -0.0069885254)
+shape = SubResource("CylinderShape3D_fqqln")
+debug_color = Color(0.7936502, 0, 0.12014634, 1)
+
+[node name="CollisionBox" type="StaticBody3D" parent="." unique_id=250394066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionBox" unique_id=1392030401]
+shape = SubResource("CapsuleShape3D_xwn44")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1620117714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1977522, 0)
+pixel_size = 0.02
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_fqqln")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=122385590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026189864, 0)
+mesh = SubResource("CylinderMesh_xwn44")

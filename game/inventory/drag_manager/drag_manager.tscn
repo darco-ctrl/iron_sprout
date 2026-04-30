@@ -4,12 +4,14 @@
 [ext_resource type="FontFile" uid="uid://bthqkcsf0uumf" path="res://assets/fonts/PixelifySans-Bold.ttf" id="3_1t3lp"]
 
 [node name="DragManager" type="Control" unique_id=1461425879 node_paths=PackedStringArray("item_texture", "item_quantity_label")]
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_behavior_recursive = 2
 script = ExtResource("1_gixkv")
 item_texture = NodePath("ItemIcon")
 item_quantity_label = NodePath("ItemIcon/ItemQuantityLabel")
@@ -25,6 +27,7 @@ anchor_bottom = 0.05925926
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+mouse_behavior_recursive = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="ItemQuantityLabel" type="Label" parent="ItemIcon" unique_id=974992698]
@@ -42,3 +45,5 @@ theme_override_font_sizes/font_size = 32
 horizontal_alignment = 2
 vertical_alignment = 2
 metadata/_edit_use_anchors_ = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

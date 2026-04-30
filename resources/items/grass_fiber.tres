@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://rxkum73wu87g"]
+
+[ext_resource type="Script" uid="uid://bnsjj10b6bern" path="res://resources/scripts/item_data.gd" id="1_saqpk"]
+[ext_resource type="Texture2D" uid="uid://bno4fjsc1ouhd" path="res://assets/items/grass_fiber.png" id="2_on2vl"]
+
+[resource]
+script = ExtResource("1_saqpk")
+name = "grass fiber"
+id = "grass_fiber"
+item_tag = "ITEM"
+texture = ExtResource("2_on2vl")
+max_quantity = 80
+metadata/_custom_type_script = "uid://bnsjj10b6bern"

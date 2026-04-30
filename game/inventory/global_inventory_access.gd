@@ -1,7 +1,9 @@
-class_name InventoryBuilder
+class_name GlobalInventoryAccess
 extends RefCounted
 
 static var drag_manager: DragManager	
+static var player_inventory: PlayerInventory
+static var drop_manager: DropManager
 
 static func give_slot(
 	slots: Array[Slot],
@@ -17,8 +19,6 @@ static func give_slot(
 		grid_container.add_child(slot)
 
 		var slot_data = SlotData.new()
-
-		slot_data.slot_changed.connect(slot.update_slot)
 
 		slot.slot_data = slot_data
 		slots[i] = slot

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ObjectData" format=3 uid="uid://cloxxs8ncltcq"]
+
+[ext_resource type="Resource" uid="uid://bfu4ps4jr8wt4" path="res://resources/items/log.tres" id="1_dua6s"]
+[ext_resource type="Script" uid="uid://b5c1qdnjpxil7" path="res://resources/scripts/object_data.gd" id="1_x4fur"]
+
+[resource]
+script = ExtResource("1_x4fur")
+name = "Tree"
+requaired_item_tag = "AXE"
+drop_item = ExtResource("1_dua6s")
+max_health = 100.0
+hardness = 1.0
+metadata/_custom_type_script = "uid://b5c1qdnjpxil7"

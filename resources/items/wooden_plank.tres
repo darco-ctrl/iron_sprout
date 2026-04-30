@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://daod2jdqjct5f"]
+
+[ext_resource type="Script" uid="uid://bnsjj10b6bern" path="res://resources/scripts/item_data.gd" id="1_ui7u6"]
+[ext_resource type="Texture2D" uid="uid://b2vo2wb04l6fl" path="res://assets/items/wooden_planks/wooden_plank.png" id="2_hvko0"]
+
+[resource]
+script = ExtResource("1_ui7u6")
+name = "wooden plank"
+id = "wooden_plank"
+item_tag = "ITEM"
+texture = ExtResource("2_hvko0")
+max_quantity = 40
+metadata/_custom_type_script = "uid://bnsjj10b6bern"
