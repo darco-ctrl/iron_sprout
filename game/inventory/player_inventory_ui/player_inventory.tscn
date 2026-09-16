@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cxcqjo22dpd1i" path="res://game/inventory/drag_manager/drag_manager.tscn" id="2_44gv6"]
 [ext_resource type="PackedScene" uid="uid://x3s6732iocjq" path="res://game/inventory/player_inventory_ui/hotbar/hotbar.tscn" id="3_44gv6"]
 
-[node name="PlayerInventory" type="Control" unique_id=1389731472 node_paths=PackedStringArray("hotbar", "drag_manager")]
+[node name="PlayerInventory" type="Control" unique_id=1389731472 node_paths=PackedStringArray("inventories", "drag_manager")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,10 +14,11 @@ grow_vertical = 2
 mouse_filter = 2
 mouse_behavior_recursive = 2
 script = ExtResource("1_alpt8")
-hotbar = NodePath("hotbar")
+inventories = [NodePath("hotbar")]
 drag_manager = NodePath("DragManager")
 
 [node name="DragManager" parent="." unique_id=1461425879 instance=ExtResource("2_44gv6")]
+z_index = 0
 layout_mode = 1
 
 [node name="hotbar" parent="." unique_id=1682795681 instance=ExtResource("3_44gv6")]

@@ -14,14 +14,14 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	check_collision()
 	input_check()
 
 func input_check() -> void:
 	if not current_hover_object: return
 
-	var current_slot = player.get_selected_slot_data()
+	var current_slot: Slot = player.get_selected_slot()
 	if not current_slot: return
 
 	var current_slot_data: SlotData = current_slot.slot_data
@@ -35,6 +35,7 @@ func input_check() -> void:
 		if (current_hover_object.object_data.requaired_item_tag ==
 			tool_data.tool_tag):
 			current_hover_object.on_hit(tool_data)
+			current_slot.update_slot()
 
 func check_collision() -> void:
 	var space_state = get_world_3d().direct_space_state

@@ -11,10 +11,10 @@ func _ready() -> void:
 	health = object_data.max_health
 
 func on_hit(tool_data: ToolData) -> void:
-	print("BF Object Health = " + str(health))
 	health -= tool_data.action_power / object_data.hardness
+	tool_data.durabiltiy -= 1
 
-	print("AF Object Health = " + str(health))
+	print("tool health = " + str(tool_data.durabiltiy))
 	if health <= 0:
 		deystroy_object()
 		

@@ -20,7 +20,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 func player_pick_up(player: Player) -> void:
 
 
-	var left_over: int = player.inventory.add_item(slot_data)
+	var left_over: int = player.player_inventory_man.add_item(slot_data)
 
 	if left_over <= 0: queue_free()
 	else:

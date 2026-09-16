@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://b3mg404ll6nwv"]
+
+[ext_resource type="Script" uid="uid://d3ega8fotquio" path="res://game/crafting/crafting_manager.gd" id="1_5jkfe"]
+[ext_resource type="Texture2D" uid="uid://mtnxfdphjqen" path="res://assets/ui/crafting_menus/crafting_menu.png" id="1_c0mic"]
+[ext_resource type="PackedScene" uid="uid://dftpa0jgg7n8o" path="res://game/crafting/required_tool/requiredtool.tscn" id="2_6wjm3"]
+[ext_resource type="PackedScene" uid="uid://cdevuy6lmpl0s" path="res://game/crafting/recipe_slot/recipe_slot.tscn" id="2_25g4r"]
+[ext_resource type="Script" uid="uid://bwr3s2qy4ijw7" path="res://resources/scripts/recipe_data.gd" id="2_glag1"]
+[ext_resource type="Resource" uid="uid://dpqivrq6g4usk" path="res://resources/crafting_recipes/plank_recipe.tres" id="3_1lsma"]
+[ext_resource type="PackedScene" uid="uid://b0q761eq7khfm" path="res://game/crafting/result_item/result_item.tscn" id="6_25g4r"]
+[ext_resource type="PackedScene" uid="uid://d2snkdtxcdufo" path="res://game/crafting/ingridiant_slot/ingridian_slot.tscn" id="7_7q8d6"]
+
+[node name="CraftingMenu" type="Control" unique_id=242301753 node_paths=PackedStringArray("recipe_container", "required_tool", "ingridiant_slots", "result_quantity_label", "result_item")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jkfe")
+recipe_slot_scene = ExtResource("2_25g4r")
+recipe_container = NodePath("Menu/RecipeContainer")
+required_tool = NodePath("Menu/Requiredtool")
+ingridiant_slots = [NodePath("Menu/HBoxContainer/IngridianSlot"), NodePath("Menu/HBoxContainer/IngridianSlot2"), NodePath("Menu/HBoxContainer/IngridianSlot3")]
+result_quantity_label = NodePath("Menu/ResultQuantityLabel")
+result_item = NodePath("Menu/ResultItem")
+recipe_datas = Array[ExtResource("2_glag1")]([ExtResource("3_1lsma")])
+
+[node name="Menu" type="TextureRect" parent="." unique_id=236575425]
+texture_filter = 1
+custom_minimum_size = Vector2(670, 380)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32552084
+anchor_top = 0.32407406
+anchor_right = 0.6744792
+anchor_bottom = 0.6759259
+offset_top = 3.0517578e-05
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_c0mic")
+metadata/_edit_use_anchors_ = true
+
+[node name="RecipeContainer" type="GridContainer" parent="Menu" unique_id=364673732]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02238806
+anchor_top = 0.039473683
+anchor_right = 0.54477614
+anchor_bottom = 0.9605263
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="ResultQuantityLabel" type="Label" parent="Menu" unique_id=1120676825]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7164179
+anchor_top = 0.6421053
+anchor_right = 0.8208955
+anchor_bottom = 0.7026316
+theme_override_colors/font_color = Color(0.9899468, 0, 0.13629547, 1)
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Requiredtool" parent="Menu" unique_id=784863775 instance=ExtResource("2_6wjm3")]
+layout_mode = 1
+anchor_left = 0.7089552
+anchor_top = 0.17105263
+anchor_right = 0.82835823
+anchor_bottom = 0.38157895
+
+[node name="ResultItem" parent="Menu" unique_id=1807998249 instance=ExtResource("6_25g4r")]
+layout_mode = 1
+anchor_left = 0.7089552
+anchor_top = 0.7368421
+anchor_right = 0.82835823
+anchor_bottom = 0.94736844
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu" unique_id=316865034]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 150.0
+offset_right = 640.0
+offset_bottom = 230.0
+theme_override_constants/separation = 5
+
+[node name="IngridianSlot" parent="Menu/HBoxContainer" unique_id=2140697393 instance=ExtResource("7_7q8d6")]
+layout_mode = 2
+
+[node name="IngridianSlot2" parent="Menu/HBoxContainer" unique_id=255107235 instance=ExtResource("7_7q8d6")]
+layout_mode = 2
+
+[node name="IngridianSlot3" parent="Menu/HBoxContainer" unique_id=1944534245 instance=ExtResource("7_7q8d6")]
+layout_mode = 2

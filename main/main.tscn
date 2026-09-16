@@ -12,6 +12,7 @@ script = ExtResource("1_53q0u")
 [node name="terrain" parent="." unique_id=479316254 instance=ExtResource("2_pjrb6")]
 
 [node name="Player" parent="." unique_id=1799927080 instance=ExtResource("3_xwkvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8188212, 0)
 
 [node name="ItemDrops" parent="." unique_id=1348372949 node_paths=PackedStringArray("player") instance=ExtResource("4_c651c")]
 player = NodePath("../Player")
@@ -20,3 +21,4 @@ player = NodePath("../Player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3513787, 0, -2.509235)
 
 [node name="world_objects" parent="." unique_id=1901621464 instance=ExtResource("5_3wy1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1833348, 0, 4.4305387)

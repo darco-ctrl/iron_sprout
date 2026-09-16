@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dftpa0jgg7n8o"]
+
+[ext_resource type="Script" uid="uid://dwuvchh2ojsiq" path="res://game/crafting/required_tool/requiredtool.gd" id="1_lsqh2"]
+
+[node name="Requiredtool" type="Control" unique_id=784863775 node_paths=PackedStringArray("tool_required")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 3
+anchor_right = 0.041666668
+anchor_bottom = 0.074074075
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lsqh2")
+tool_required = NodePath("Label")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1217607512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true

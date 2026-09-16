@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cdevuy6lmpl0s"]
+
+[ext_resource type="Script" uid="uid://jo50akpop6x" path="res://game/crafting/recipe_slot/recipe_slot.gd" id="1_n0v56"]
+[ext_resource type="Texture2D" uid="uid://clgun5n6q7470" path="res://assets/ui/crafting_menus/recipe_slot.png" id="1_wblt1"]
+
+[node name="RecipeSlot" type="Control" unique_id=1292203375 node_paths=PackedStringArray("indicator", "item_icon")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 3
+anchor_right = 0.041666668
+anchor_bottom = 0.074074075
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n0v56")
+indicator = NodePath("SelectionIndicator")
+item_icon = NodePath("Icon")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=293701770]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_wblt1")
+
+[node name="SelectionIndicator" type="ColorRect" parent="." unique_id=838683166]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1068116088]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.875
+anchor_bottom = 0.8125
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

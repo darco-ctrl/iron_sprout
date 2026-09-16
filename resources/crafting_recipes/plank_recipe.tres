@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3 uid="uid://dpqivrq6g4usk"]
+
+[ext_resource type="Script" uid="uid://dxg2sa7atvccq" path="res://resources/scripts/ingridient.gd" id="1_r6nyb"]
+[ext_resource type="Resource" uid="uid://bfu4ps4jr8wt4" path="res://resources/items/resources/log.tres" id="2_clmbu"]
+[ext_resource type="Script" uid="uid://bwr3s2qy4ijw7" path="res://resources/scripts/recipe_data.gd" id="2_ke1ao"]
+[ext_resource type="Resource" uid="uid://daod2jdqjct5f" path="res://resources/items/wooden_plank.tres" id="3_4gosy"]
+
+[sub_resource type="Resource" id="Resource_gyr02"]
+script = ExtResource("1_r6nyb")
+item = ExtResource("2_clmbu")
+quantity = 1
+metadata/_custom_type_script = "uid://dxg2sa7atvccq"
+
+[resource]
+script = ExtResource("2_ke1ao")
+name = "plank_recipe"
+ingredients = Array[ExtResource("1_r6nyb")]([SubResource("Resource_gyr02")])
+hunger_depletion = 0.4
+tool_required = "AXE"
+result_item = ExtResource("3_4gosy")
+result_quantity = 4
+metadata/_custom_type_script = "uid://bwr3s2qy4ijw7"

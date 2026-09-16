@@ -1,10 +1,11 @@
 extends Control
+class_name PlayerHunger
 
 @export var progress_bar: TextureProgressBar
 
 var hunger: float = 100
 var max_hunger: float = 100
-var hunger_drain_rate: float = -0.4
+var hunger_drain_rate: float = -0.05
 var can_hunger_drain: bool = true
 
 # Called when the node enters the scene tree for the first time.

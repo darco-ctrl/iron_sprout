@@ -13,24 +13,26 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_behavior_recursive = 2
 script = ExtResource("1_gixkv")
-item_texture = NodePath("ItemIcon")
-item_quantity_label = NodePath("ItemIcon/ItemQuantityLabel")
+item_texture = NodePath("CanvasLayer/ItemIcon")
+item_quantity_label = NodePath("CanvasLayer/ItemIcon/ItemQuantityLabel")
 
-[node name="ItemIcon" type="TextureRect" parent="." unique_id=1825470647]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1169188909]
+layer = 4
+
+[node name="ItemIcon" type="TextureRect" parent="CanvasLayer" unique_id=1825470647]
 texture_filter = 1
 clip_contents = true
 custom_minimum_size = Vector2(64, 64)
-layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.033333335
 anchor_bottom = 0.05925926
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-mouse_behavior_recursive = 2
+mouse_behavior_recursive = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="ItemQuantityLabel" type="Label" parent="ItemIcon" unique_id=974992698]
+[node name="ItemQuantityLabel" type="Label" parent="CanvasLayer/ItemIcon" unique_id=974992698]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.734375
@@ -40,6 +42,7 @@ anchor_bottom = 0.9947916
 offset_top = 8.333336
 grow_horizontal = 0
 grow_vertical = 0
+mouse_behavior_recursive = 1
 theme_override_fonts/font = ExtResource("3_1t3lp")
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 2

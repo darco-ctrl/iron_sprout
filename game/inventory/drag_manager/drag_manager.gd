@@ -1,7 +1,6 @@
 extends Control
 class_name  DragManager
 
-
 @export var item_texture: TextureRect
 @export var item_quantity_label: Label
 

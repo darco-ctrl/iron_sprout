@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d2snkdtxcdufo"]
+
+[ext_resource type="Script" uid="uid://b11s3gklvodr7" path="res://game/crafting/ingridiant_slot/ingridian_slot.gd" id="1_yg02v"]
+[ext_resource type="Texture2D" uid="uid://clgun5n6q7470" path="res://assets/ui/crafting_menus/recipe_slot.png" id="2_h3huy"]
+
+[node name="IngridianSlot" type="Control" unique_id=2140697393 node_paths=PackedStringArray("item_icon")]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 3
+anchor_right = 0.041666668
+anchor_bottom = 0.074074075
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yg02v")
+item_icon = NodePath("Icon")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="." unique_id=977800418]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h3huy")
+
+[node name="Indicator" type="ColorRect" parent="." unique_id=1426406170]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="." unique_id=2033480327]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.875
+anchor_bottom = 0.8125
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true

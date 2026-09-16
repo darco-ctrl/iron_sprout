@@ -1,90 +1,20 @@
 [gd_scene format=3 uid="uid://cn1djvk85qvpv"]
 
-[ext_resource type="Texture2D" uid="uid://cctkgjcgfe7u2" path="res://assets/ground/grass/grass_1.jpg" id="1_ar587"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqj73"]
+albedo_color = Color(0.27058825, 0.5764706, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uaf13"]
-albedo_texture = ExtResource("1_ar587")
+[sub_resource type="BoxMesh" id="BoxMesh_t73ud"]
+material = SubResource("StandardMaterial3D_jqj73")
+size = Vector3(10, 1, 10)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_rx45g"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_jqj73"]
+size = Vector3(10, 1, 10)
 
-[node name="Ground" type="Node3D" unique_id=1735055823]
+[node name="Ground" type="StaticBody3D" unique_id=1287980966]
+collision_layer = 8
 
-[node name="grass_mesh_1" type="MeshInstance3D" parent="." unique_id=587675379]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=509478122]
+mesh = SubResource("BoxMesh_t73ud")
 
-[node name="grass_mesh_2" type="MeshInstance3D" parent="." unique_id=604239430]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_3" type="MeshInstance3D" parent="." unique_id=1079890260]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_4" type="MeshInstance3D" parent="." unique_id=782080383]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_5" type="MeshInstance3D" parent="." unique_id=1838132936]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_6" type="MeshInstance3D" parent="." unique_id=781308016]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_7" type="MeshInstance3D" parent="." unique_id=1733159793]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_8" type="MeshInstance3D" parent="." unique_id=2040487560]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_9" type="MeshInstance3D" parent="." unique_id=1581882493]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_10" type="MeshInstance3D" parent="." unique_id=743778028]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_11" type="MeshInstance3D" parent="." unique_id=92469282]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_12" type="MeshInstance3D" parent="." unique_id=1689156911]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_13" type="MeshInstance3D" parent="." unique_id=1695665511]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_14" type="MeshInstance3D" parent="." unique_id=617191028]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_15" type="MeshInstance3D" parent="." unique_id=1175068622]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
-
-[node name="grass_mesh_16" type="MeshInstance3D" parent="." unique_id=104111239]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
-material_override = SubResource("StandardMaterial3D_uaf13")
-mesh = SubResource("PlaneMesh_rx45g")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1074095224]
+shape = SubResource("BoxShape3D_jqj73")

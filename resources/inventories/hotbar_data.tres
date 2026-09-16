@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryData" format=3 uid="uid://yq5vmu45lvmt"]
+
+[ext_resource type="Script" uid="uid://5t1085f6gnva" path="res://resources/scripts/inventory_data.gd" id="1_2i7h8"]
+
+[resource]
+script = ExtResource("1_2i7h8")
+id = "hotbar"
+max_slots = 6
+metadata/_custom_type_script = "uid://5t1085f6gnva"
