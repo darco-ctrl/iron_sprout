@@ -9,12 +9,12 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5fytw"]
 
-[node name="Player" type="CharacterBody3D" unique_id=1799927080 node_paths=PackedStringArray("headpivot", "camera", "player_inventory_man", "player_hunger")]
+[node name="Player" type="CharacterBody3D" unique_id=1799927080 node_paths=PackedStringArray("head_pivot", "camera", "player_inventory_manager", "player_hunger")]
 collision_mask = 8
 script = ExtResource("1_b2mth")
-headpivot = NodePath("Pivot")
-camera = NodePath("Pivot/Camera3D")
-player_inventory_man = NodePath("UI/PlayerInventory")
+head_pivot = NodePath("HeadPivot")
+camera = NodePath("HeadPivot/Camera3D")
+player_inventory_manager = NodePath("UI/PlayerInventory")
 player_hunger = NodePath("UI/PlayerHunger")
 
 [node name="PlayerModel" type="MeshInstance3D" parent="." unique_id=1413444350]
@@ -23,11 +23,11 @@ mesh = SubResource("CapsuleMesh_a4w0n")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2104830618]
 shape = SubResource("CapsuleShape3D_5fytw")
 
-[node name="Pivot" type="Node3D" parent="." unique_id=603090707]
+[node name="HeadPivot" type="Node3D" parent="." unique_id=603090707]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
-[node name="Camera3D" type="Camera3D" parent="Pivot" unique_id=2068217996]
-fov = 40.0
+[node name="Camera3D" type="Camera3D" parent="HeadPivot" unique_id=2068217996]
+fov = 70.0
 far = 100.0
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1025741991]

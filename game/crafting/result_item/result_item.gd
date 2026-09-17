@@ -13,7 +13,7 @@ func _ready() -> void:
 	print(player.name)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func try_crafting() -> void:
@@ -28,7 +28,7 @@ func try_crafting() -> void:
 
 		tool_data.durabiltiy -= 1
 		tool_slot.update_slot()
-		# removes item 
+		# removes item
 		for ingridiant in recipe_data.ingredients:
 			GlobalInventoryAccess.player_inventory.remove_item(ingridiant.item, ingridiant.quantity)
 		player.player_hunger.add_hunger(-recipe_data.hunger_depletion)
@@ -46,11 +46,11 @@ func try_crafting() -> void:
 
 		GlobalInventoryAccess.drop_manager.drop_at_player_location(slot_data)
 
-		
+
 
 func _on_gui_input(event: InputEvent) -> void:
 	var mouse_event: InputEventMouseButton = event as InputEventMouseButton
-	
+
 	if not mouse_event: return
 	if mouse_event.button_index == MouseButton.MOUSE_BUTTON_LEFT and mouse_event.pressed:
 		try_crafting()
