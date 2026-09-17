@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://d2snkdtxcdufo" path="res://game/crafting/ingridiant_slot/ingridian_slot.tscn" id="7_7q8d6"]
 
 [node name="CraftingMenu" type="Control" unique_id=242301753 node_paths=PackedStringArray("recipe_container", "required_tool", "ingridiant_slots", "result_quantity_label", "result_item")]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

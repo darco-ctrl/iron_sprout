@@ -2,9 +2,7 @@ extends Node3D
 class_name  DropManager
 
 @export var item_drop_scene: PackedScene
-
 @export var player: Player
-
 @export var item_data: ItemData
 
 func _ready() -> void:
@@ -28,30 +26,23 @@ func test_spawn() -> void:
 	item_drop.update()
 	add_child(item_drop)
 
-func drop_at_player_location(slot_data: SlotData) -> void:
+func drop_item_at_location(slot_data: SlotData, _position: Vector3) -> void:
 	var item_drop: ItemDrop = make_item_drop(slot_data)
 
-	drop_item_at(item_drop, player.position)
+	var spawn_position = _position
+	spawn_position.y += 0.5
 
-func drop_item_at_location(slot_data: SlotData, pos: Vector3) -> void:
-	var item_drop: ItemDrop = make_item_drop(slot_data)
+	item_drop.position = spawn_position
 
-	drop_item_at(item_drop, pos)
+func drop_from_player(item_slot: SlotData) -> void:
+	var item_drop: ItemDrop = make_item_drop(item_slot)
 
+	var spawn_position: Vector3 = player.get_drop_origin() # Item Drop spawn location
+	var direction: Vector3 = player.get_facing_direction() # direction of player facing
 
-func drop_item(slot_data: SlotData) -> void:
+	item_drop.position = spawn_position
+	item_drop.apply_central_impulse(direction * 2.0)
 
-	var item_drop: ItemDrop = make_item_drop(slot_data)
-
-	# dropped item positon
-	var spawn_pos: Vector3 = player.position
-	spawn_pos.y += 0.1 + (item_drop.item_icon.texture.get_height() *
-						  item_drop.item_icon.pixel_size)
-
-	drop_item_at(item_drop, spawn_pos)
-
-func drop_item_at(item_drop: ItemDrop, pos: Vector3) -> void:
-	item_drop.position = pos
 
 func make_item_drop(slot_data: SlotData) -> ItemDrop:
 	var item_drop: ItemDrop = item_drop_scene.instantiate()

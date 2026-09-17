@@ -21,6 +21,7 @@ func _on_gui_input(event: InputEvent) -> void:
 	if not mouse_event: return
 	if mouse_event.button_index == MouseButton.MOUSE_BUTTON_LEFT and mouse_event.pressed:
 		crafting_man.select_recipe(recipe_data)
+		print("selected crafting recipe")
 
 func select() -> void:
 	indicator.visible = true

@@ -44,7 +44,7 @@ func try_crafting() -> void:
 		slot_data.item_data = recipe_data.result_item
 		slot_data.quantity = leflt_over
 
-		GlobalInventoryAccess.drop_manager.drop_at_player_location(slot_data)
+		GlobalInventoryAccess.drop_manager.drop_from_player(slot_data)
 
 
 

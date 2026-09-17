@@ -17,14 +17,14 @@ func on_hit(tool_data: ToolData) -> void:
 	print("tool health = " + str(tool_data.durabiltiy))
 	if health <= 0:
 		deystroy_object()
-		
+
 func deystroy_object() -> void:
 	var slots_data: Array[SlotData] = get_object_drop()
-	var spawn_pos: Vector3 = position
-	spawn_pos.y = 0.2
+	var item_drop_position: Vector3 = global_position
+	item_drop_position.y = 0.2
 	for slot_data in slots_data:
 		GlobalInventoryAccess.drop_manager.drop_item_at_location(
-			slot_data, spawn_pos
+			slot_data, item_drop_position
 		)
 	queue_free()
 

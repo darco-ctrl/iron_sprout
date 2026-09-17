@@ -1,10 +1,17 @@
 [gd_scene format=3 uid="uid://cn1djvk85qvpv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jqj73"]
-albedo_color = Color(0.18039216, 0.6627451, 0.03529412, 1)
+[ext_resource type="Shader" uid="uid://d0vqbi6rfrkju" path="res://game/world_environment/ground/ground.gdshader" id="1_t73ud"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jqj73"]
+render_priority = 0
+shader = ExtResource("1_t73ud")
+shader_parameter/color_light = Color(0.41960785, 0.78431374, 0.18039216, 1)
+shader_parameter/color_dark = Color(0.14117648, 0.5137255, 0.078431375, 1)
+shader_parameter/noise_scale = 50.0
+shader_parameter/roughness_val = 0.9
 
 [sub_resource type="BoxMesh" id="BoxMesh_t73ud"]
-material = SubResource("StandardMaterial3D_jqj73")
+material = SubResource("ShaderMaterial_jqj73")
 size = Vector3(100, 1, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_twsjo"]

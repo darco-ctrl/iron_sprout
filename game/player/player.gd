@@ -4,7 +4,7 @@ class_name  Player
 #---- NODE REFERENCES ----#
 @export var head_pivot: Node3D
 @export var camera: Camera3D
-
+@export var item_drop_origin: Node3D
 
 #---- RESOURCE REFERENCES ----#
 @export var player_inventory_manager: PlayerInventory
@@ -49,14 +49,6 @@ func _physics_process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if mouse_locked && event is InputEventMouseMotion:
 		rotate_head(event)
-
-func handle_input() -> void:
-	if Input.is_action_just_pressed("lock_mouse"):
-		mouse_locked = !mouse_locked
-		if mouse_locked:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func rotate_head(mouse_event: InputEventMouseMotion):
 	head_pivot.rotate_y(-mouse_event.relative.x * camera_sensitivity)
@@ -130,3 +122,20 @@ func get_selected_slot() -> Slot:
 	var slot: Slot = player_hotbar.current_selected_slot
 
 	return slot
+
+
+func handle_input() -> void:
+	if Input.is_action_just_pressed("lock_mouse"):
+		mouse_locked = !mouse_locked
+		if mouse_locked:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+
+func get_facing_direction() -> Vector3:
+	return -camera.global_transform.basis.z
+
+
+func get_drop_origin() -> Vector3:
+	return item_drop_origin.global_position
