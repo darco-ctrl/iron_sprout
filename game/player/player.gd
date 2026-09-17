@@ -48,6 +48,7 @@ func handle_input() -> void:
 func rotate_head(mouse_event: InputEventMouseMotion):
 	headpivot.rotate_y(-mouse_event.relative.x * camera_sensitivity)
 	camera.rotate_x(-mouse_event.relative.y * camera_sensitivity)
+	camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 
 func movement(delta_time: float) -> void:
 	var direction: Vector3 = Vector3.ZERO
