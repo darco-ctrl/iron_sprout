@@ -53,7 +53,7 @@ func _input(event: InputEvent) -> void:
 func rotate_head(mouse_event: InputEventMouseMotion):
 	head_pivot.rotate_y(-mouse_event.relative.x * camera_sensitivity)
 	camera.rotate_x(-mouse_event.relative.y * camera_sensitivity)
-	camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
+	camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-60), deg_to_rad(60))
 
 
 func head_bob(delta_time: float):
@@ -132,6 +132,14 @@ func handle_input() -> void:
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
+func get_current_tool() -> ToolData:
+	var slot = get_selected_slot()
+	if !slot: return null
+
+	var tool_data = slot.get_item_data()
+	if !tool_data: return null
+
+	return tool_data
 
 func get_facing_direction() -> Vector3:
 	return -camera.global_transform.basis.z

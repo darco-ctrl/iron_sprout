@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bu2ho8s5s856u"]
+
+[ext_resource type="Script" uid="uid://vixs76s4d34j" path="res://game/player/raycast/player_ray_cast.gd" id="1_yi1qt"]
+
+[node name="PlayerRayCast" type="RayCast3D" unique_id=960509270]
+target_position = Vector3(0, 0, -2)
+collision_mask = 4
+script = ExtResource("1_yi1qt")

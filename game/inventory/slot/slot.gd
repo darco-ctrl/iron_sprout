@@ -38,18 +38,18 @@ func add_item(new_item_data: ItemData, add_quantity: int) -> int:
 	return add_quantity - added
 
 func update_label() -> void:
-	var temp_str: String = "" 
-	
+	var temp_str: String = ""
+
 	if slot_data.quantity > 1:
 		temp_str = str(slot_data.quantity)
-	
+
 	quantity_label.text = temp_str
-	
+
 
 func update_texture() -> void:
 	if slot_data.item_data:
 		item_icon.texture = slot_data.item_data.texture
-	
+
 	else:
 		item_icon.texture = null
 
@@ -60,7 +60,7 @@ func update_slot() -> void:
 
 	else:
 		var tool_data: ToolData = slot_data.item_data as ToolData
-		if tool_data: 
+		if tool_data:
 			tool_durabilty.visible = true
 
 			if tool_data.durabiltiy <= 0:
@@ -73,7 +73,7 @@ func update_slot() -> void:
 	if not is_slot_empty and slot_data.quantity > slot_data.item_data.max_quantity:
 		var drop_manager: DropManager = GlobalInventoryAccess.drag_manager.drop_manager
 		var player_pos = drop_manager.player.position
-		
+
 		var sd: SlotData = SlotData.new()
 
 		sd.item_data = slot_data.item_data.duplicate()
@@ -116,4 +116,10 @@ func set_selectable(state: bool) -> void:
 		selection_indiecator.visible = selected
 		add_child(selection_indiecator)
 		move_child(selection_indiecator, 0)
-	
+
+
+func get_item_data() -> ItemData:
+	if !slot_data: return null
+	if !slot_data.item_data: return null
+
+	return slot_data.item_data
