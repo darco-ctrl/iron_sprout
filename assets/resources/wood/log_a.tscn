@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b6kumw542j58q"]
+
+[ext_resource type="PackedScene" uid="uid://d0miqea6kffc6" path="res://assets/models/resources/wood/wood_a/Untitled.glb" id="1_8aplk"]
+
+[node name="WoodLog" unique_id=2052586725 instance=ExtResource("1_8aplk")]
+
+[node name="Wood_Log_A" parent="." index="0" unique_id=1391320500]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.2, 0)

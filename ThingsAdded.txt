@@ -1,0 +1,12 @@
+
+walkable player
+camera motion and headbob for player
+player controls
+Inventory System
+Crafting System
+tools
+hunger
+Tree
+picking up items
+dropping items
+crafting depleets hunger and tool durabilty

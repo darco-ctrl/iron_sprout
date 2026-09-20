@@ -3,11 +3,7 @@ class_name HarvestableBehavior
 
 var health: float
 
-@export var sprite_3d: Sprite3D
-@export var selection_indiecator_mesh: MeshInstance3D
-
 func _ready() -> void:
-	selection_indiecator_mesh.visible = false
 	health = object_data.max_health
 
 func on_hit(tool_data: ToolData) -> void:
@@ -27,12 +23,6 @@ func deystroy_object() -> void:
 			slot_data, item_drop_position
 		)
 	queue_free()
-
-func on_hover_enter() -> void:
-	selection_indiecator_mesh.visible = true
-
-func on_hover_exit() -> void:
-	selection_indiecator_mesh.visible = false
 
 func get_object_drop() -> Array[SlotData]:
 	var slots_data: Array[SlotData]

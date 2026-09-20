@@ -1,23 +1,18 @@
 [gd_scene format=3 uid="uid://dlddyqegn853s"]
 
-[ext_resource type="Texture2D" uid="uid://c62n3h2p37bgl" path="res://assets/props/trees/tree_1.png" id="1_fqqln"]
 [ext_resource type="Script" uid="uid://bcofe6htuxw3m" path="res://game/objects/haravestables/harvestable_behavior.gd" id="1_xwn44"]
 [ext_resource type="Resource" uid="uid://cloxxs8ncltcq" path="res://resources/objects/tree.tres" id="2_mjdhc"]
+[ext_resource type="PackedScene" uid="uid://djvft42w6wxxl" path="res://assets/props/trees/tree_1/tree.glb" id="3_mjdhc"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fqqln"]
 height = 2.0302734
 radius = 0.38330078
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwn44"]
-radius = 0.05
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_shy4g"]
+radius = 0.25
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_xwn44"]
-height = 0.1
-
-[node name="Tree" type="Node3D" unique_id=518745851 node_paths=PackedStringArray("sprite_3d", "selection_indiecator_mesh")]
+[node name="Tree" type="Node3D" unique_id=518745851]
 script = ExtResource("1_xwn44")
-sprite_3d = NodePath("Sprite3D")
-selection_indiecator_mesh = NodePath("MeshInstance3D")
 object_data = ExtResource("2_mjdhc")
 
 [node name="HitBox" type="StaticBody3D" parent="." unique_id=1499097767]
@@ -34,15 +29,6 @@ debug_color = Color(0, 0.51329255, 0.03171826, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CollisionBox" unique_id=1392030401]
-shape = SubResource("CapsuleShape3D_xwn44")
+shape = SubResource("CylinderShape3D_shy4g")
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1620117714]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1977522, 0)
-pixel_size = 0.02
-billboard = 2
-texture_filter = 0
-texture = ExtResource("1_fqqln")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=122385590]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.026189864, 0)
-mesh = SubResource("CylinderMesh_xwn44")
+[node name="tree" parent="." unique_id=898385796 instance=ExtResource("3_mjdhc")]
