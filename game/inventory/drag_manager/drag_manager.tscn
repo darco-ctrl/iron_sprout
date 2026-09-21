@@ -31,6 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 mouse_behavior_recursive = 1
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="ItemQuantityLabel" type="Label" parent="CanvasLayer/ItemIcon" unique_id=974992698]

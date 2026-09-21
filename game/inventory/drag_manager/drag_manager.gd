@@ -62,7 +62,7 @@ func update_dragger() -> void:
 
 		return
 
-	item_texture.texture = slot_data.item_data.texture
+	item_texture.texture = slot_data.item_data.icon
 
 	item_quantity_label.text = str(slot_data.quantity)
 	#) -- this prints 10

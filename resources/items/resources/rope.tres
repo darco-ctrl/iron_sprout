@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://5wgqgo70drcx"]
+
+[ext_resource type="Script" uid="uid://bnsjj10b6bern" path="res://resources/scripts/item_data.gd" id="1_a3s2t"]
+
+[resource]
+script = ExtResource("1_a3s2t")
+name = "rope"
+id = "rope"
+max_quantity = 40
+metadata/_custom_type_script = "uid://bnsjj10b6bern"

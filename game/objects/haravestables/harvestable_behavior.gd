@@ -1,10 +1,20 @@
 extends ObjectBehavior
 class_name HarvestableBehavior
 
+@export var model: HarvestableModel
 var health: float
 
 func _ready() -> void:
 	health = object_data.max_health
+
+	if object_data.mesh:
+		model.set_mesh(object_data.mesh)
+
+func on_hover_enter() -> void:
+	model.on_hover_enter()
+
+func on_hover_exit() -> void:
+	model.on_hover_exit()
 
 func on_hit(tool_data: ToolData) -> void:
 	health -= tool_data.action_power / object_data.hardness

@@ -48,7 +48,7 @@ func update_label() -> void:
 
 func update_texture() -> void:
 	if slot_data.item_data:
-		item_icon.texture = slot_data.item_data.texture
+		item_icon.texture = slot_data.item_data.icon
 
 	else:
 		item_icon.texture = null

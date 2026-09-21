@@ -2,6 +2,7 @@
 
 [ext_resource type="Resource" uid="uid://bfu4ps4jr8wt4" path="res://resources/items/resources/log.tres" id="1_dua6s"]
 [ext_resource type="Script" uid="uid://b5c1qdnjpxil7" path="res://resources/scripts/object_data.gd" id="1_x4fur"]
+[ext_resource type="ArrayMesh" uid="uid://bpy14urjael5c" path="res://assets/models/environment/trees/tree_a_mesh.tres" id="2_22qgk"]
 
 [resource]
 script = ExtResource("1_x4fur")
@@ -10,4 +11,5 @@ requaired_item_tag = "AXE"
 drop_item = ExtResource("1_dua6s")
 max_health = 100.0
 hardness = 1.0
+mesh = ExtResource("2_22qgk")
 metadata/_custom_type_script = "uid://b5c1qdnjpxil7"

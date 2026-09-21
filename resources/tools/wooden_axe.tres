@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ToolData" format=3 uid="uid://cmuy1hoymscom"]
 
 [ext_resource type="Script" uid="uid://dxovjo8nh3p50" path="res://resources/scripts/tool_data.gd" id="1_lw4og"]
-[ext_resource type="Texture2D" uid="uid://ccj7vpp4bvnoj" path="res://assets/tools/wooden_axe.png" id="2_gei06"]
+[ext_resource type="Texture2D" uid="uid://ccj7vpp4bvnoj" path="res://assets/icons/tools/wooden_axe.png" id="2_gei06"]
 
 [resource]
 script = ExtResource("1_lw4og")
@@ -14,6 +14,6 @@ max_durability = 100.0
 durabiltiy = 100.0
 name = "wooden_axe"
 id = "wooden_axe"
-texture = ExtResource("2_gei06")
+icon = ExtResource("2_gei06")
 max_quantity = 1
 metadata/_custom_type_script = "uid://dxovjo8nh3p50"

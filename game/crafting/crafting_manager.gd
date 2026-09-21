@@ -46,10 +46,10 @@ func select_recipe(recipe_data: RecipeData) -> void:
 		required_tool.tool_required.text = recipe_data.tool_required
 
 		for i in range(recipe_data.ingredients.size()):
-			ingridiant_slots[i].item_icon.texture = recipe_data.ingredients[i].item.texture
+			ingridiant_slots[i].item_icon.texture = recipe_data.ingredients[i].item.icon
 
 		result_quantity_label.text = str(recipe_data.result_quantity)
-		result_item.item_icon.texture = recipe_data.result_item.texture
+		result_item.item_icon.texture = recipe_data.result_item.icon
 		result_item.recipe_data = recipe_data
 
 func can_craft(recipe_data: RecipeData) -> bool:

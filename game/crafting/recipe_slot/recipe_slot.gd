@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func update() -> void:
 	if recipe_data:
-		item_icon.texture = recipe_data.result_item.texture
+		item_icon.texture = recipe_data.result_item.icon
 
 func _on_gui_input(event: InputEvent) -> void:
 	var mouse_event: InputEventMouseButton = event as InputEventMouseButton

@@ -1,7 +1,6 @@
 [gd_resource type="Resource" script_class="ToolData" format=3 uid="uid://mq2eky0qxl2t"]
 
 [ext_resource type="Script" uid="uid://dxovjo8nh3p50" path="res://resources/scripts/tool_data.gd" id="1_rxrsf"]
-[ext_resource type="Texture2D" uid="uid://dxtutkx6nrx3v" path="res://assets/tools/wooden_hoe.png" id="2_o7vv0"]
 
 [resource]
 script = ExtResource("1_rxrsf")
@@ -14,6 +13,5 @@ max_durability = 100.0
 durabiltiy = 100.0
 name = "wooden hoe"
 id = "wooden_hoe"
-texture = ExtResource("2_o7vv0")
 max_quantity = 1
 metadata/_custom_type_script = "uid://dxovjo8nh3p50"

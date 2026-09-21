@@ -16,12 +16,12 @@ func _ready() -> void:
 	axis_lock_angular_z = true
 
 func update() -> void:
-	if slot_data.item_data.item_model:
-		var item_model = slot_data.item_data.item_model.instantiate()
+	if slot_data.item_data.model:
+		var item_model = slot_data.item_data.model.instantiate()
 		add_child(item_model)
 
-	elif slot_data.item_data.texture:
-		item_icon.texture = slot_data.item_data.texture
+	elif slot_data.item_data.icon:
+		item_icon.texture = slot_data.item_data.icon
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if !can_picked_up: return
