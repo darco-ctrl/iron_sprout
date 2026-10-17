@@ -1,4 +1,4 @@
-
+# Inventory System
 ## 1. How it works
 
 Inventory system is fully dynamic which means adding new inventory to something like chest is easy as few clicks and few lines since I use resource to spawn slots and stuff and a inventory data to store inventory max slots and more data
