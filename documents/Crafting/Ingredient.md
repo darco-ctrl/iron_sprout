@@ -1,4 +1,4 @@
-
+# Ingredient
 Ingredient Data are used inside [[Recipe]] to store as ingredient
 
 ingredient has 2 properties
