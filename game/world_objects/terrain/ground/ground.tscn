@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cn1djvk85qvpv"]
 
-[ext_resource type="Shader" uid="uid://d0vqbi6rfrkju" path="res://game/world_environment/ground/ground.gdshader" id="1_t73ud"]
+[ext_resource type="Shader" uid="uid://d0vqbi6rfrkju" path="res://game/world_objects/terrain/ground/ground.gdshader" id="1_t73ud"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jqj73"]
 render_priority = 0

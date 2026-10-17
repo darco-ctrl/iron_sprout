@@ -1,0 +1,19 @@
+- [x] Create Iron Sprout project file
+- [x] Setup project folders
+- [x] Create [[Player]] Scene with basic movement script
+- [x] Slot system (reusable in other inventory)
+- [x] [[Inventory System]] (reusable in other entity or chests)
+- [x] Hot bar system
+- [x] [[Item]]s (`.tres`)
+- [x] [[Item]] adding and stacking
+- [x] [[Item]] dragging from slot and place into slot
+- [x] dropped [[Item]]
+- [x] [[Item]] pick up
+- [x] [[Item]] dropping
+- [x] [[Tool Data]]s (`.tres`)
+- [x] Basic Tree
+- [x] [[Tool Data]] Functioning
+- [x] [[Ingredient]]
+- [x] [[Recipe]]
+- [x] [[Crafting System]]
+- [x] Convert Current 2d perspective to 3d 

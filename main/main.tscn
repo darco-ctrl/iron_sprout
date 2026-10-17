@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ct1pcbpvvfp5e"]
 
 [ext_resource type="Script" uid="uid://bb1ka12t10j12" path="res://main/main.gd" id="1_53q0u"]
-[ext_resource type="PackedScene" uid="uid://b1fpdcm6ofv1e" path="res://game/world_environment/terrain/terrain.tscn" id="2_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://b1fpdcm6ofv1e" path="res://game/environment/world_environment.tscn" id="2_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://cpyr51uxo4um2" path="res://game/player/player.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://dtr5xjfncde5i" path="res://game/item_drop/DropManager.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://dlaj63ov51nj4" path="res://game/world_objects/world_objects.tscn" id="5_3wy1v"]
@@ -9,7 +9,7 @@
 [node name="Main" type="Node3D" unique_id=222223210]
 script = ExtResource("1_53q0u")
 
-[node name="terrain" parent="." unique_id=479316254 instance=ExtResource("2_pjrb6")]
+[node name="WorldEnvironment" parent="." unique_id=479316254 instance=ExtResource("2_pjrb6")]
 
 [node name="Player" parent="." unique_id=1799927080 instance=ExtResource("3_xwkvk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8188212, 0)

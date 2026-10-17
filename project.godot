@@ -12,7 +12,7 @@ config_version=5
 
 config/name="iron_sprout"
 run/main_scene="uid://ct1pcbpvvfp5e"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b1fpdcm6ofv1e"]
+
+[ext_resource type="PackedScene" uid="uid://dslwxt8odveaf" path="res://game/environment/sun/sun.tscn" id="2_3ewv2"]
+[ext_resource type="Environment" uid="uid://ckbatlk5gej6s" path="res://assets/environment/sky/day_sky.tres" id="2_21x8r"]
+
+[node name="WorldEnvironment" type="Node3D" unique_id=479316254]
+
+[node name="sun" parent="." unique_id=49080811 instance=ExtResource("2_3ewv2")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1036938363]
+environment = ExtResource("2_21x8r")

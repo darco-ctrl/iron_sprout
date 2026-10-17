@@ -2,17 +2,19 @@
 
 [ext_resource type="Script" uid="uid://b5rbkkcij2m3d" path="res://game/objects/haravestables/model/harvestable_model.gd" id="1_u4u5q"]
 [ext_resource type="Shader" uid="uid://j7d5bviy6phj" path="res://assets/material/shaders/outline.gdshader" id="2_jcndo"]
+[ext_resource type="ArrayMesh" uid="uid://bpy14urjael5c" path="res://assets/models/environment/trees/tree_a_mesh.tres" id="4_4ldkx"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_h0dv1"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l7hdu"]
 render_priority = 0
 shader = ExtResource("2_jcndo")
 shader_parameter/outline_color = Color(0, 0, 0, 1)
-shader_parameter/outline_width = 1.0
+shader_parameter/outline_width = 2.0
 
 [node name="HarvestableModel" type="Node3D" unique_id=1681500305 node_paths=PackedStringArray("mesh_instance")]
 script = ExtResource("1_u4u5q")
-mesh_instance = NodePath("Mesh")
-material_overlay = SubResource("ShaderMaterial_h0dv1")
+mesh_instance = NodePath("MeshInstance3D")
+material_overlay = SubResource("ShaderMaterial_l7hdu")
 
-[node name="Mesh" type="MeshInstance3D" parent="." unique_id=2119382619]
-material_overlay = SubResource("ShaderMaterial_h0dv1")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1370901715]
+material_overlay = SubResource("ShaderMaterial_l7hdu")
+mesh = ExtResource("4_4ldkx")

@@ -42,4 +42,5 @@ anchor_right = 0.875
 anchor_bottom = 0.8125
 grow_horizontal = 2
 grow_vertical = 2
+expand_mode = 1
 metadata/_edit_use_anchors_ = true

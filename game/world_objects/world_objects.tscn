@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfvcjtvhtyph3" path="res://game/world_objects/world_objects_manager.gd" id="1_t2wnf"]
 [ext_resource type="PackedScene" uid="uid://dlddyqegn853s" path="res://game/objects/haravestables/harvestable.tscn" id="2_2cyyu"]
+[ext_resource type="PackedScene" uid="uid://cn1djvk85qvpv" path="res://game/world_objects/terrain/ground/ground.tscn" id="3_enpyc"]
 
 [node name="world_objects" type="Node3D" unique_id=1901621464]
 script = ExtResource("1_t2wnf")
@@ -9,3 +10,7 @@ script = ExtResource("1_t2wnf")
 [node name="harvestables" type="Node3D" parent="." unique_id=1806298827]
 
 [node name="Tree" parent="harvestables" unique_id=518745851 instance=ExtResource("2_2cyyu")]
+
+[node name="Terrain" type="Node3D" parent="." unique_id=1867665027]
+
+[node name="Ground" parent="Terrain" unique_id=2098417962 instance=ExtResource("3_enpyc")]
