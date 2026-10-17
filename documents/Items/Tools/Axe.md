@@ -1,3 +1,4 @@
+# Axe
 All axe is made by one resource script which is [[Tool Data]] the values inside it determines if its axe or shovel or hoe or something else
 ### 1. Stone Axe
 
