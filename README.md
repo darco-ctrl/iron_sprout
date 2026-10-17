@@ -12,6 +12,10 @@ A 3D gameplay prototype built in Godot to learn and implement complex, data-driv
 - **Modular Design:** The inventory system is decoupled so it can easily be attached to players, chests, or other entities.
 ## 📚 Documentation
 I documented the architecture and logic of the inventory system to ensure scalability and maintainability. You can read the technical breakdown here:
+### Crafting System
+- [Crafting System](docs/Crafting/Crafting_System.md)
+- [Ingredient](docs/Crafting/Ingredient.md)
+- 
 
 ## 🚀 How to Run
 1. Clone the repository.
