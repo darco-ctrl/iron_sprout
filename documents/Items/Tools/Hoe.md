@@ -1,10 +1,13 @@
+# Hoe
+
 All hoe is made by one resource script which is [[Tool Data]] the values inside it determines if its hoe or shovel or hoe or something else
 ### 1. Stone Hoe
 
 Stone hoe is earliest hoe player can crafted, it is made with using
 - 1x strong stick
 - 1x stone
-[[Item]] properties
+
+ ## properties
 
 | Property     | Value     |
 | ------------ | --------- |
