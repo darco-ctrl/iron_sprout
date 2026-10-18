@@ -10,7 +10,7 @@ A 3D gameplay prototype built in Godot to learn and implement complex, data-driv
 - **Crafting Framework:** Resource-based recipes, ingredients, and tool requirements.
 - **World Interactions:** Item dropping/pickup, tool durability, and resource gathering (tree chopping).
 - **Modular Design:** The inventory system is decoupled so it can easily be attached to players, chests, or other entities.
-- 
+
 ## 📚 Documentation
 I documented the architecture and logic of the inventory system to ensure scalability and maintainability. You can read the technical breakdown here:
 
