@@ -5,6 +5,12 @@ A 3D gameplay prototype built in Godot to learn and implement complex, data-driv
   
 *Note: The game is not a finished commercial product. The UI and art assets are placeholder (made in Aseprite in ~10 minutes) so I could focus entirely on backend systems.*
 
+## 🎥 Showcase
+
+<p align="center">
+  <video src="showcase/IronSproutShowcase.mp4" width="80%" controls></video>
+</p>
+
 ## 🛠️ Systems Implemented
 - **Data-Driven Inventory:** Reusable slot system supporting item stacking, dragging/dropping, and max-stack limits.
 - **Crafting Framework:** Resource-based recipes, ingredients, and tool requirements.
