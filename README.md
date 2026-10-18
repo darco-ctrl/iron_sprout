@@ -28,4 +28,4 @@ I documented the architecture and logic of the inventory system to ensure scalab
 3. Press `F5` to run the main scene.
 ## 📝 Development Status
 This project was a deep dive into Godot's resource system and scene management. 
-After a while I will think what to game I should make this project into
+After a while I will think what game will I make using this project
